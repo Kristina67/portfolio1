@@ -1,0 +1,372 @@
+/*Указываем что на свсём сайте будет использован шрифт Open Sans*/
+body{
+  font-family: 'Open Sans', sans-serif;/*полностью скопирован с сайта fonts.google.com*/
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+.container{
+  widht:100%;/*ширина*/
+  max-widht:1170px;/*максимальная ширина*/
+    margin-left: auto;/*отступ слева*/
+  margin-right: auto;/*отступ справа*/
+}
+
+.menu{
+  /*background:grey; /*фон*/
+  margin-top: 18px;/*отступ с верху*/
+  display:flex; /*Флекс для распределения положения эл-ов по экрану*/
+  justify-content: space-between; /*по разным сторонам*/
+  align-items: center; /*выравнивание по высоте*/ 
+}
+
+.name{
+  display: block;
+  font-size:16px ;/*размер шрифта*/
+  font-weight: 800;/*толщина шрифта*/
+}
+.description{
+  margin-left: 9px; /*отступ слева*/
+}
+
+
+.menu-logo{
+  display: flex;
+  align-items: center;/*выравнивание по высоте*/ 
+  
+}
+
+.avatar{
+  width: 57px;/*ширина*/
+  height: 57px;/*высота*/
+  background-color: #2b2a2c;/*фоноывй цвет*/
+ background:url('https://pp.userapi.com/c834203/v834203159/a60ab/NaIf_NL3aTw.jpg?ava=1'); /*фон url(адрес из ВК)*/
+    background-size:100%;/*размер фонового изображения*/
+  border-radius:50%;/*скругление со всех сторон*/
+}
+/*таким образом находим ссылки "a" в "menu-list" и задаём для них параметры*/
+
+.menu-list{
+  display: flex;
+  align-items: center;
+}
+
+.menu-list a{
+  text-decoration: none; /*убрать подчёркивание*/
+  color: #2b2a2c;/*цвет шрифта*/
+  text-transform: uppercase;/*все буквы заглавные*/
+  font-weight: 800;/*толщина шрифта*/
+  margin-right: 34px;/*отступ справа*/
+  border-bottom: 2px solid transparent;/*толщина и цвет обводки*/  
+    display: inline-block;
+    line-height: 2;/*межстрочный интервал*/
+    cursor: pointer;/*изменение курсора*/
+    position:relative;/*Положение элемента устанавливается относительно его исходного места*/
+}
+
+.menu-list a:after {
+    background-color: #2b2a2c;/*фоноывй цвет*/
+    display: block;
+    content: "";/*позволяет вставлять генерируемое содержание в текст веб-страницы, которое первоначально в тексте отсутствует*/
+    height: 2px;/*высота*/
+    width: 0%;/*ширина*/
+    left:50%; /* Положение от левого края */
+    position:absolute;/* Абсолютное позиционирование */
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+
+.menu-list a:hover:after,a:focus:after {
+    width: 100%;
+}
+
+.menu-button
+{
+  text-transform: uppercase;/*все буквы заглавные*/
+  font-size: 14px;/*размер шрифта*/
+    font-weight: 800;/*толщина шрифта*/
+ background-color: transparent;/*фоноывй цвет (прозрачный)*/
+  border-radius: 50px; 
+border: 2px solid #2b2a2c; /*толщина и цвет обводки*/
+padding: 13px 22px;/*внутренние отступы*/
+}
+.hero{
+  padding-top: 112px;/*внутренyий отступ Сверху*/
+  padding-bottom: 112px;/*внутренyий отступ Снизу*/
+  background: url('https://3.downloader.disk.yandex.ru/preview/a8d07ec244b6b89821f824dc7e4af07b1f2df097fd527303164e728a4ae7e11b/inf/gsx89531lbAK_CLf6nlBQvOaxXmqABMXPPHxmmxJpBokzk_iKkK33gph4rnGZEJGF2NAUVNIQWmujLtUjwupAw%3D%3D?uid=331935314&filename=developer-photo.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=1903x979') no-repeat right bottom;
+}
+.hero-subtitle{
+  font-size: 32px; /*размер шрифта*/
+}
+.hero-title{
+  font-size: 45px; /*размер шрифта*/
+  font-weight: 800;/*толщина шрифта*/
+  margin-top: 5px;/*отступ сверху*/
+  margin-bottom: 5px;/*отступ снизу*/
+}
+.hero-description{
+  font-size: 18px; /*размер шрифта*/
+  color: #6a696b;
+}
+.hero-social{
+  margin-top: 30px;/*отступ сверху*/
+}
+.social{
+  display:inline-block;
+  width: 41px;/*ширина*/
+  height: 41px;/*высота*/
+  margin-right: 10px;/*отступ справа*/
+  color: #fff;/*цвет шрифта*/
+  text-align: center; /*выравнивание текста*/
+  line-height: 41px;/*высота строки*/
+}
+.behance-bg{
+  background-color: #1869ff;/*фоноывй цвет*/
+}
+.facebook-bg{
+  background-color: #3a5898;/*фоноывй цвет*/
+}
+.instagram-bg{
+  background-color: #13578a;/*фоноывй цвет*/
+}
+.vk-bg{
+  background-color: #56acef;/*фоноывй цвет*/
+}
+.hero-buttons{
+  margin-top: 40px;
+}
+
+.button{
+  font-size: 16px;/*размер шрифта*/
+  font-weight: 800;/*толщина шрифта*/
+  text-decoration: none;/*убрать подчёркивание*/
+  background-color: #2b2a2c;/*фоноывй цвет*/
+  border-radius:50px;/*радиус контура*/
+  padding: 20px 34px;/*внутренyие отступы */
+  display:inline-block;
+  
+  
+}
+.button-primary{
+  color: #fff;
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.25);
+  margin-right:17px ;
+  margin-bottom: 10px;
+}
+
+.button-o{
+  background-color: transparent;
+  color: #6a696b;
+  border: 1px solid #6a696b;
+ 
+}
+.projects{
+  padding: 97px 0;
+}
+
+.project-cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;/*перенос объектов*/
+}
+
+.project-card{
+  min-height: 370px;
+  width: 370px;
+ border-radius:10px;
+ overflow: hidden;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 50px;
+}
+
+.project-card__image{
+  height: 300px; 
+}
+.landing-page{
+  background: url('https://image.freepik.com/free-vector/no-translate-detected_23-2147540757.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-corporate{
+  background: url('https://cdn3.vectorstock.com/i/1000x1000/84/62/startup-landing-webpage-or-corporate-design-vector-14368462.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-page1{
+  background: url('https://www.codester.com/static//uploads/items/8114/preview-xl.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing-page2{
+  background: url('https://webselo.com/wp-content/uploads/2018/11/Via-estrategiaweb360-com.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-corporate1{
+  background: url('https://i.graphicmama.com/blog/wp-content/uploads/2017/10/30125732/landing-pages.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-page3{
+  background: url('https://as1.ftcdn.net/jpg/02/22/56/92/500_F_222569268_uIRqm0QmBGay0N3yZqQ6ar1vXqJcjEbU.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-page4{
+  background: url('http://unbounce.com/photos/zen-web-solutions1.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-corporate2{
+  background: url('https://www.buylandingpagedesign.com/blog/wp-content/uploads/2016/02/affordable-health-insurance-free-quote-lead-capture-landing-page-design-006.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-page5{
+  background: url('https://i.graphicmama.com/blog/wp-content/uploads/2017/10/30100052/personal-landing-page-design.jpg') center;
+  border-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.project-card__info{
+  padding:19px 13px;
+}
+.project-category{
+  display: block; 
+  font-size: 12px;
+  color: #2b2a2c;
+}
+.project-title{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.summary{
+    padding-top: 112px;/*внутренyий отступ Сверху*/
+  padding-bottom: 112px;/*внутренyий отступ Снизу*/
+  background: url('https://2.downloader.disk.yandex.ru/preview/346be0fd3289d0689bb3174210562d7bb703d1f86b5ba2f97efc1ee26cc78d19/inf/1c0ESSqo2vbb_GDUYSuIWLpPuETfF1imPdUmnRewbRz_N037kjbt6v3Av1seTCnr-K2E605PbPMin_En7sXB-w%3D%3D?uid=331935314&filename=2-layers.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=1903x979') no-repeat left;
+}
+
+.summary-info{ 
+margin-left: auto;
+width: 471px;
+}
+
+
+.summary-title{
+  
+  font-size: 45px; /*размер шрифта*/
+  font-weight: 800;/*толщина шрифта*/
+  margin-top: 5px;/*отступ сверху*/
+  margin-bottom: 42px;/*отступ снизу*/
+  text-transform: uppercase;
+}
+.summary-description{
+  font-size: 12px; /*размер шрифта*/
+  color: #717072;;
+}
+
+.summary-buttons{
+  margin-top: 52px;
+}
+
+.footer{
+  background-color: #2b2a2c;
+  padding: 20px 0;
+ color: #8d8d8e;
+}
+
+.footer a{
+ color: #8d8d8e;
+  text-decoration: none;
+}
+
+.footer-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text{
+  display: flex;
+  align-items: center;
+}
+
+.copyright{
+  padding-right: 16px;
+  margin-right: 16px;
+  border-right: 1px solid #413f41;
+  font-size:14px;
+}
+.footer-social__link{
+  font-size:20px;
+  margin-right: 13px;
+ 
+}
+.footer-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-menu a{
+   font-size: 14px;
+  display: inline-block;
+  margin-right: 30px;
+}
+.footer-button{
+  font-size: 14px;/*размер шрифта*/
+ background-color: transparent;/*фоноывй цвет (прозрачный)*/
+  border-radius: 50px; 
+border: 1px solid #8d8d8e;/*толщина и цвет обводки*/
+padding: 8px 22px;/*внутренние отступы*/
+}
+
+/*адаптивность*/
+@media (max-width: 1200px)/*на мониторах чья мах ширина 1200 пикселей выполняется условие*/
+{
+  .container{
+    width:965px;
+  }
+  .project-card{
+     width:48%;
+  }
+}
+@media (max-width: 992px)
+{
+  .container{
+    width:760px;
+  }
+    .project-card{
+     width:48%;
+  }
+}
+@media (max-width: 768px)
+{
+  .description_smal{
+   font-size: 10px; 
+  }
+  .menu-list{
+    display: none;
+  }
+  .hero{
+    padding-bottom: 550px;
+    padding-top: 30px;
+  }
+  
+  .container{
+    width:95%;/*контейнер стал резиновый*/
+  }
+    .project-card{
+     width:95%;
+     margin: 30px auto;
+  }
+}
